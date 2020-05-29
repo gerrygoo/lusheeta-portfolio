@@ -7,6 +7,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   height: 100vh;
   width: 100vw;
 
@@ -28,4 +29,17 @@ body {
   grid-row-start: var(--row);
   grid-column-end: span var(--col-span, var(--default-col-span));
   grid-row-end: span var(--row-span, var(--default-row-span));
+}
+@media all and (max-width: 900px) {
+  .scrolling-layer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(30vh, auto);
+  }
+  .placed {
+    grid-column-start: calc(var(--col) - 1);
+    grid-row-start: var(--row);
+    grid-column-end: span var(--col-span, var(--default-col-span));
+    grid-row-end: span var(--row-span, var(--default-row-span));
+  }
 }

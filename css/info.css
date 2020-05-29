@@ -1,6 +1,9 @@
 .two-col {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3fr 5fr;
+  grid-template-areas:
+    "nav nav"
+    "paragraph title";
 }
 
 .navbar {
@@ -10,8 +13,7 @@
 
   margin: 0 0 auto 2%;
 
-  grid-column-start: 1;
-  grid-column-end: span 2;
+  grid-area: nav;
 }
 .navbar > .arrow {
   display: flex;
@@ -29,39 +31,68 @@
 }
 .line-container > .line {
   background-color: black;
-  height: 3px;
+  height: 2px;
 }
 .navbar > .routes {
   width: 44vw;
+  margin-left: auto;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
-  font-size: 2.5em;
+  /* font-size: 2.5em; */
+  font-size: 7vmin;
 }
 
 .paragraph-container {
   display: flex;
   flex-direction: column;
   padding: 0 20%;
+
+  grid-area: paragraph;
 }
 .paragraph-container > h3 {
   margin: 0;
   font-size: 2em;
 }
 .paragraph-container > p {
+  margin: 0;
   font-size: 1.5em;
 }
 .title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  grid-area: title;
 }
 .title-container > h2 {
   margin: 0;
   font-size: 2.5em;
+}
+
+@media (max-width: 900px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 5fr;
+    grid-template-areas:
+      "nav"
+      "title"
+      "paragraph";
+    grid-row-gap: 5vh;
+  }
+  .navbar {
+    padding: 0 10vw;
+  }
+  .navbar > .line-container {
+    display: none;
+  }
+  .title-container {
+    padding-left: 20%;
+    align-items: flex-start;
+  }
 }
 
 /* mock */

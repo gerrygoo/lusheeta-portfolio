@@ -14,11 +14,32 @@
   justify-content: center;
 }
 
+.header-container h3,
 .header-container h2 {
   font-size: 3.5em;
   margin: 0px;
 }
+.header-container h3.narrow {
+  display: none;
+}
 
+@media (max-width: 900px) {
+  .floating-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 10vh;
+    align-self: center;
+  }
+  .floating-layer .header-container h2 {
+    display: none;
+  }
+  .header-container h3.narrow {
+    display: inline;
+  }
+}
+
+/* mock */
 .mock-pic {
   display: flex;
   flex-grow: 1;
