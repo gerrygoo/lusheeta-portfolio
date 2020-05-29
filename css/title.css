@@ -1,6 +1,7 @@
 .two-col {
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "nav nav" ". .";
 }
 
 .floating-layer .header-container {
@@ -25,18 +26,23 @@
 }
 
 @media (max-width: 900px) {
-  .floating-layer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 10vh;
-    align-self: center;
+  .two-col {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "nav"
+      "title";
+    grid-row-gap: 5vh;
   }
-  .floating-layer .header-container h2 {
+  .navbar {
+    padding: 0 10vw;
+  }
+  .navbar > .line-container {
     display: none;
   }
-  .header-container h3.narrow {
-    display: inline;
+  .title-container {
+    padding-left: 20%;
+    align-items: flex-start;
   }
 }
 
