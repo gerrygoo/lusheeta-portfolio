@@ -6,10 +6,9 @@
 .navbar {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
 
-  height: 30%;
-
-  margin: 0 0 0 2%;
+  margin: 0 0 auto 2%;
 
   grid-column-start: 1;
   grid-column-end: span 2;
