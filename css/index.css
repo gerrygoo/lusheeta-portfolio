@@ -1,0 +1,61 @@
+:root {
+  --default-col-span: 1;
+  --default-row-span: 1;
+}
+
+body {
+  margin: 0;
+}
+
+.floating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+
+.floating > .header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row-start: 2;
+}
+
+.floating .center {
+  justify-content: center;
+}
+
+.floating h2 {
+  font-size: 3.5em;
+  margin: 0px;
+}
+
+.huge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(30vh, auto);
+}
+
+.huge-grid .placed {
+  grid-column-start: var(--col);
+  grid-row-start: var(--row);
+  grid-column-end: span var(--col-span, var(--default-col-span));
+  grid-row-end: span var(--row-span, var(--default-row-span));
+}
+
+.mock-pic {
+  display: flex;
+  flex-grow: 1;
+  background-color: red;
+  border-radius: 5%;
+  margin: 5px;
+  /* height: 100%; */
+}
