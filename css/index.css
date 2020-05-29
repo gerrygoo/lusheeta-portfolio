@@ -41,9 +41,7 @@
 }
 
 /* mock */
-.mock-pic {
+.pic {
   display: flex;
   flex-grow: 1;
-  background-color: burlywood;
-  margin: 5px;
 }

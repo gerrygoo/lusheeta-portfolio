@@ -16,8 +16,8 @@
   </head>
 
   <body>
-    <div class="floating-layer two-col">
-      <div class="navbar">
+    <div class="floating-layer two-col" style="pointer-events: none;">
+      <div class="navbar" style="pointer-events: auto;">
         <div class="arrow">&lt</div>
         <div class="line-container">
           <div class="line"></div>
@@ -28,16 +28,26 @@
         </div>
       </div>
       <div class="header-container">
-        <h3><a href="project.html">BRANDING</a></h3>
+        <h3>Branding</h3>
       </div>
     </div>
 
     <div class="scrolling-layer">
-      <div class="mock-pic placed" style="--row: 1; --col: 1;"></div>
-      <div
-        class="mock-pic placed"
-        style="--row: 2; --col: 3; --row-span: 2;"
-      ></div>
+      <div class="pic placed" style="--row: 2; --col: 1;">
+        <a href="project_detail.html"
+          ><img src="./assets/branding/shampoo.jpg"
+        /></a>
+      </div>
+      <div class="pic placed" style="--row: 3; --col: 3;">
+        <a href="project_detail.html"
+          ><img src="./assets/branding/pulques.jpg"
+        /></a>
+      </div>
+      <div class="pic placed" style="--row: 4; --col: 2;">
+        <a href="project_detail.html"
+          ><img src="./assets/branding/shampoo.jpg"
+        /></a>
+      </div>
     </div>
   </body>
 </html>

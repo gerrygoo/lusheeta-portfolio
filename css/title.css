@@ -1,14 +1,14 @@
 .two-col {
   grid-template-rows: 1fr 5fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "nav nav" ". .";
+  grid-template-areas: "nav nav" "header .";
 }
 
 .floating-layer .header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-row-start: 2;
+  grid-area: header;
 }
 
 .floating-layer .center {
@@ -46,10 +46,7 @@
   }
 }
 
-/* mock */
-.mock-pic {
+.pic {
   display: flex;
   flex-grow: 1;
-  background-color: burlywood;
-  margin: 5px;
 }
