@@ -17,8 +17,9 @@ body {
 .scrolling-layer {
   display: grid;
   overflow: hidden;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(30vh, auto);
+  row-gap: 10vh;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: minmax(25vh, auto);
 }
 
 .scrolling-layer img {
@@ -38,14 +39,11 @@ body {
 }
 @media all and (max-width: 900px) {
   .scrolling-layer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(30vh, auto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .placed {
-    grid-column-start: calc(var(--col) - 1);
-    grid-row-start: var(--row);
-    grid-column-end: span var(--col-span, var(--default-col-span));
-    grid-row-end: span var(--row-span, var(--default-row-span));
+  .placed img {
+    max-height: 30vh;
   }
 }
