@@ -17,8 +17,11 @@
 
 .header-container h3,
 .header-container h2 {
-  font-size: 3.5em;
   margin: 0px;
+
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 3.5em;
 }
 
 .header-container h3.narrow {
@@ -37,6 +40,12 @@
   .title-container {
     padding-left: 20%;
     align-items: flex-start;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .scrolling-layer {
+    margin-top: 30vh;
   }
 }
 

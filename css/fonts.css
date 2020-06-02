@@ -13,12 +13,13 @@ a {
   text-decoration: none;
 
   color: black;
-  font-weight: 300;
+  font-weight: 400;
 
-  transition: font-weight 0.3s, color 1s;
+  transition: font-weight 1.5s linear, color 1.5s linear;
 }
 
 a:hover {
-  font-weight: 400;
-  color: rgb(112, 255, 200);
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0);
+  /* color: rgb(112, 255, 200); */
 }

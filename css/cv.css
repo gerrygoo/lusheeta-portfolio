@@ -6,8 +6,15 @@
   justify-content: center;
 }
 
+.info-container a {
+  margin: 2vh 0;
+}
+
 @media (max-width: 900px) {
   .info-container {
     align-items: flex-start;
+  }
+  .info-container a {
+    margin: 0;
   }
 }

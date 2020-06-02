@@ -41,11 +41,3 @@
 .navbar img {
   min-width: 100%;
 }
-@media (max-width: 900px) {
-  /* .navbar {
-    padding: 0 10vw;
-  }
-  /* .navbar > .line-container {
-    display: none;
-  } */ */
-}

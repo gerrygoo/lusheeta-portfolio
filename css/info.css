@@ -17,10 +17,32 @@
   margin: 0;
   font-size: 2em;
 }
-.paragraph-container > p {
-  margin: 0;
-  font-size: 1.5em;
+
+.paragraph-container .stack {
+  display: grid;
 }
+
+.paragraph-container .background {
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  filter: blur(50px);
+}
+
+.paragraph-container p {
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 2;
+
+  margin: 0;
+  font-family: Work Sans;
+  font-size: 3vmin;
+}
+
 .title-container {
   display: flex;
   flex-direction: column;
@@ -29,8 +51,11 @@
   grid-area: title;
 }
 .title-container > h2 {
-  margin: 0;
-  font-size: 2.5em;
+  margin: 0px;
+
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 3.5em;
 }
 
 @media (max-width: 900px) {
